@@ -267,6 +267,7 @@
         plugins.push({
           name,
           init: () => preloadScript(plugin),
+          initPromise: preloadScript(plugin),
           run: ([preloadedUrl, url]) => preloadedUrl ? loadScript(preloadedUrl).catch(() => loadScript(url)) : loadScript(url)
         });
       } else if (typeof plugin === "function") {
