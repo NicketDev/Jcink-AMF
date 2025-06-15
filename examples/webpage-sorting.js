@@ -1,4 +1,4 @@
-AMF.plugin("Multiple Admin Notes", () => {
+AMF.plugin("Sort and filter webpages", () => {
 	AMF.on("content-frame-load", ({ contentWindow }) => {
 		const url = new URL(contentWindow.location.href);
 		if (
