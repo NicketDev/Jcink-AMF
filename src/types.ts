@@ -3,10 +3,13 @@ import type EventEmitter from "./lib/EventEmitter";
 export type Details = {
 	rootFrame: HTMLIFrameElement;
 	rootWindow: Window;
+	rootUrl: URL;
 	menuFrame: HTMLIFrameElement;
 	menuWindow: Window;
+	menuUrl: URL | null;
 	contentFrame: HTMLIFrameElement;
 	contentWindow: Window;
+	contentUrl: URL | null;
 };
 
 export interface MenuLink {
